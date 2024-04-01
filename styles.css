@@ -1,0 +1,276 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: (to top, rgb(16, 20, 39), rgb(43, 43, 43));
+
+}
+
+.logo-img img {
+  height: 5rem;
+  width: auto;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgb(43, 43, 43)) ;
+  position: sticky;
+}
+
+.nav-bar{
+  position: fixed;  /* Stick the navbar to the top of the viewport */
+  top: 0;           /* Align the top edge of the navbar with the top edge of the viewport */
+  left: 0;          /* Align the left edge of the navbar with the left edge of the viewport */
+  width: 100%;      /* Ensure the navbar spans the full width of the viewport */
+  z-index: 1000;    /* Ensure the navbar is above other content */
+  background-color: #fff;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: .5rem;
+  gap: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: rgb(5, 189, 189);
+}
+
+.hero {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Adjust height as needed to blend with the nav bar */
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(16, 20, 39, 0.0)), url('images/gpu1.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero img {
+  display: block;
+  width: 100%; /* Make the image fill the container */
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-btn {
+  position: absolute;
+  height: 10vh;
+  width: 30vw;
+  font-size: 1.25rem;
+  font-weight: 700;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
+  background-color: #269fc49a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease;
+
+}
+
+.cta-btn:hover {
+  background-color: #0c8dc9c7;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  background: linear-gradient(to top, rgb(43, 43, 43), rgb(16, 20, 39));
+}
+
+.product {
+  height: 50vh;
+  width: auto;
+  background-color: #1a5f7438;
+  margin: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-image: url(./images/vr.webp);
+  color: white;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#product1 h3,
+#product2 h3,
+#product3 h3 {
+  /* background-color: rgba(240, 248, 255, 0.486); */
+  border-radius: .75rem;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: none;
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+}
+
+#product1 button,
+#product2 button,
+#product3 button,
+.contact button {
+  border: none;
+  background-color: #0c8dc99f;
+  height: 2rem;
+  width: 10vw;
+  border-radius: .75rem;
+}
+
+#product2 {
+  background-image: url(./images/hearing-aids.webp);
+}
+
+#product3 {
+  background-image: url(./images/drone.webp);
+}
+
+.aboutUs {
+  height: 50vh;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: #2b2b2b;
+  color: rgb(240, 242, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-image: url(./images/aboutUsbackground.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutUs h3 {
+  color: #7a7a7a;
+  margin-bottom: 2rem;
+}
+
+.aboutUs p {
+  background-color: #2b2b2ba6;
+  border-radius: 1rem;
+  padding: .5rem;
+}
+
+.contact{
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.contact input {
+  width: 20rem;
+  height: 100%;
+  background-color: #7a7a7a;
+  border: none;
+  border-radius: 1rem;
+}
+
+.contact input:hover {
+  background-color: #214fa3;
+  color: whitesmoke;
+}
+
+footer {
+  background-color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.aboutUs {
+  padding: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+  .aboutUs {
+    padding: 0 30rem;
+  }
+}
+
+.aboutUsText {
+  max-width: 60ch;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .aboutUs,
+  .contact {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  .contactUsBtn {
+    width: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
